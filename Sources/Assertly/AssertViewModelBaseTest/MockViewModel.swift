@@ -13,8 +13,6 @@ public class MockViewModel: ViewModelProtocol {
     public var mockResults: [String: Any] = [:]
     public var mockErrors: [String: Error] = [:]
     
-    public init() {}
-    
     public func performAction<T>(_ action: String, completion: @escaping (Result<T, Error>) -> Void) {
         if let error = mockErrors[action] {
             completion(.failure(error))
