@@ -8,7 +8,7 @@
 import Foundation
 
 public struct TestConfiguration {
-    static var baseURL = "https://api.example.com"
+    static var baseURL = "https://someapi.example.com"
     static var apiKey = "test_api_key"
     
    public static func configure(baseURL: String, apiKey: String) {
