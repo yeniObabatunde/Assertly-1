@@ -21,7 +21,7 @@ public protocol UnitTestable {
 
 
 open class BaseTestCase<T: UnitTestable>: XCTestCase {
-   public var sut: T?
+    public var sut: T?
     
     public override func setUp() {
         super.setUp()
@@ -35,7 +35,7 @@ open class BaseTestCase<T: UnitTestable>: XCTestCase {
         super.tearDown()
     }
     
-   public func createDependencies() -> T.Dependencies {
+    open func createDependencies() -> T.Dependencies {
         fatalError("Subclasses must implement createDependencies()")
     }
 }
